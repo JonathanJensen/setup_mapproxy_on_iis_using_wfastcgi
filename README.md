@@ -1,4 +1,4 @@
-# Steps to setup MapProxy on IIS 7.5+ using python 2.7
+# Steps to setup MapProxy on IIS 7.5+ using python 2.7 and WfastCGI
 
 1. install CGI in IIS (https://docs.microsoft.com/en-us/iis/configuration/system.webserver/cgi)
 2. install either python 2.7.* for Windows (https://www.python.org/downloads/). Making sure to enable the 'Set Path' option in the installer and install for all users. I would recommend installing to 'c:\python27'.
