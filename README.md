@@ -37,4 +37,5 @@ Executable Path = c:\inetpub\[TARGETDIR]\scripts\python.exe|c:\inetpub\[TARGETDI
 Name = WSGI
 Request Restrictions > 'Invoke handler only if request is mapped to' = unchecked
 ```
-20. right click on the site and click 'Manage Site > Browse'
+20. change file permissions for 'C:\inetpub\[TARGETDIR]\' to give 'Full Control' to user group 'IIS_USRS'. Including child objects.
+21. right click on the site and click 'Manage Site > Browse'
