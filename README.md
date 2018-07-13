@@ -13,16 +13,16 @@
 10. type 'pip install pyproj' + enter
 11. type 'pip install wfastcgi' + enter
 12. to test mapproxy is working type 'mapproxy-util --version' + enter. should display version number like 'MapProxy 1.11.0'
-13. type 'mapproxy-util create -t base-config c:\inetpub\[TARGETDIR]\[APPNAME]' + enter. where [APPNAME] is the name of your appilcation.
-14. type 'mapproxy-util create -t wsgi-app -f c:\inetpub\[TARGETDIR]\[APPNAME]\mapproxy.yaml c:\inetpub\[TARGETDIR]\[APPNAME]\config.py'. where [APPNAME] is the name of your appilcation from the previous step.
+13. type 'mapproxy-util create -t base-config c:\inetpub\\[TARGETDIR]\\[APPNAME]' + enter. where [APPNAME] is the name of your appilcation.
+14. type 'mapproxy-util create -t wsgi-app -f c:\inetpub\\[TARGETDIR]\\[APPNAME]\mapproxy.yaml c:\inetpub\[TARGETDIR]\[APPNAME]\config.py'. where [APPNAME] is the name of your appilcation from the previous step.
 15. type 'mapproxy-util create -t log-ini c:\inetpub\[TARGETDIR]\[APPNAME]\log.ini'.
-16. open 'c:\inetpub\[TARGETDIR]\[APPNAME]\config.py' with notepad and change 'application = make_wsgi_app(...' to 'app = make_wsgi_app(...' and uncomment the lines below. ALSO MAKE SURE THERE ARE ALL BACKSLASHES IN THE LOGFILE PATH.
+16. open 'c:\inetpub\\[TARGETDIR]\\[APPNAME]\config.py' with notepad and change 'application = make_wsgi_app(...' to 'app = make_wsgi_app(...' and uncomment the lines below. ALSO MAKE SURE THERE ARE ALL BACKSLASHES IN THE LOGFILE PATH.
 ```
 # from logging.config import fileConfig
 # import os.path
 # fileConfig(r'c:\inetpub\[TARGETDIR]\[APPNAME]/log.ini', {'here': os.path.dirname(__file__)})
 ```
-17. open IIS and goto 'FastCGI Settings' for the server. Add an application with 'C:\inetpub\[TARGETDIR]\Scripts\python.exe' as the 'FULL PATH' and 'C:\inetpub\[TARGETDIR]\Lib\site-packages\wfastcgi.py' as the arguments.
+17. open IIS and goto 'FastCGI Settings' for the server. Add an application with 'C:\inetpub\\[TARGETDIR]\Scripts\python.exe' as the 'FULL PATH' and 'C:\inetpub\\[TARGETDIR]\Lib\site-packages\wfastcgi.py' as the arguments.
 18. once saved 'Edit...' the 'FastCGI' entry and add the following 'Environmental Variables'
 ```
 PYTHONPATH=C:\inetpub\[TARGETDIR]\Scripts\
@@ -37,5 +37,5 @@ Executable Path = c:\inetpub\[TARGETDIR]\scripts\python.exe|c:\inetpub\[TARGETDI
 Name = WSGI
 Request Restrictions > 'Invoke handler only if request is mapped to' = unchecked
 ```
-20. change file permissions for 'C:\inetpub\[TARGETDIR]\' to give 'Full Control' to user group 'IIS_USRS'. Including child objects.
+20. change file permissions for 'C:\inetpub\\[TARGETDIR]\' to give 'Full Control' to user group 'IIS_USRS'. Including child objects.
 21. right click on the site and click 'Manage Site > Browse'
