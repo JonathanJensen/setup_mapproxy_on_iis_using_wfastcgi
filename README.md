@@ -22,9 +22,9 @@
 16. open 'c:\inetpub\\[TARGETDIR]\\[APPNAME]\config.py' with notepad and change 'application = make_wsgi_app(...' to 'app = make_wsgi_app(...' and uncomment the lines below. 
 ### MAKE SURE THERE ARE ALL BACKSLASHES (\\) IN THE LOGFILE PATH.
 ```python
-from logging.config import fileConfig
-import os.path
-fileConfig(r'c:\inetpub\[TARGETDIR]\[APPNAME]/log.ini', {'here': os.path.dirname(__file__)})
+# from logging.config import fileConfig
+# import os.path
+# fileConfig(r'c:\inetpub\[TARGETDIR]\[APPNAME]/log.ini', {'here': os.path.dirname(__file__)})
 ```
 config.py should read something like this
 ```python
