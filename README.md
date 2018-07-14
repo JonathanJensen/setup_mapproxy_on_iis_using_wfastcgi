@@ -45,7 +45,7 @@ ARGUMENTS=C:\inetpub\[TARGETDIR]\Lib\site-packages\wfastcgi.py
 PYTHONPATH=C:\inetpub\[TARGETDIR]\Scripts\
 WSGI_HANDLER=config.app
 ```
-18. in your IIS site add a new site with any name and 'c:\inetpub\\[TARGETDIR]\\[APPNAME]' as the physical path (https://docs.microsoft.com/en-au/iis/get-started/getting-started-with-iis/create-a-web-site)
+18. in IIS manager add a new site with any name and 'c:\inetpub\\[TARGETDIR]\\[APPNAME]' as the physical path (https://docs.microsoft.com/en-au/iis/get-started/getting-started-with-iis/create-a-web-site)
 19. in the new site settings goto 'Handler Mappings' and 'Add Module Mapping...' using settings below
 ```
 Request Path = *
