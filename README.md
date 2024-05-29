@@ -59,4 +59,4 @@ Request Restrictions > 'Invoke handler only if request is mapped to' = unchecked
 ```
 21. change file permissions for 'C:\inetpub\\[TARGETDIR]\' to give 'Full Control' to user group 'IIS_IUSRS'. Including child objects.
 22. right click on the site in IIS and click 'Manage Site > Browse' and you should see the mapproxy demo site. These settings can be viewed and changed in the mapproxy.yaml file.
-## Donesky
+## Original by Donesky (https://github.com/maeneak/setup_mapproxy_on_iis_using_wfastcgi) Updated for MapProxy 2.0.2 on IIS 10 by Jonathan Langholz Jensen (GEOGRAF A/S)
